@@ -8,6 +8,16 @@ const assertEqual = function(actual, expected) {
     console.log(`${f}${f}${f} Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+
+const head = function(input) {
+  return input[0];
+};
+
+
 // TEST CODE
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
+
+assertEqual(head([5, 6, 7]), 5);
+assertEqual(head([]), 'undefined');
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
