@@ -1,5 +1,6 @@
 const eqArrays = function(a, b) {
   let result;
+  // eslint-disable-next-line no-cond-assign
   if (a.length = b.length) {
     for (let i = 0; i < a.length; i++) {
       result = a[i] === b[i] ? true : false;
