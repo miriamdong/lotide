@@ -9,7 +9,7 @@ const eqArrays = function(a, b) {
 };
 
 const assertArraysEqual = (actual, expected) => {
-  (eqArrays(actual, expected)) ? console.log('passed'): console.log('failed');
+  (eqArrays(actual, expected)) ? console.log('passed') : console.log('failed');
 };
 
 const letterPositions = function(str) {
