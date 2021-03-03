@@ -1,8 +1,11 @@
 const eqArrays = function(a, b) {
   let result;
-  // eslint-disable-next-line no-cond-assign
-  if (a.length = b.length) {
+  if (Array.isArray(a) && Array.isArray(b)) {
+    if (a.length !== b.length) {
+      return false;
+    }
     for (let i = 0; i < a.length; i++) {
+      // console.log(a[i], b[i]);
       result = a[i] === b[i] ? true : false;
     }
   }
@@ -10,7 +13,7 @@ const eqArrays = function(a, b) {
 };
 
 const assertArraysEqual = (actual, expected) => {
-  (eqArrays(actual, expected)) ? console.log('passed'): console.log('failed');
+  (eqArrays(actual, expected)) ? console.log(`Assertion Passed: ${actual} === ${expected}`): console.log(`Assertion Failed: ${actual} !== ${expected}`);
 };
 
 
