@@ -1,1 +1,0 @@
-assertEqual(eqObjects(cd, dc), true);

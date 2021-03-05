@@ -5,7 +5,6 @@ const map = function(arr, callback) {
   for (let item of arr) {
     results.push(callback(item));
   }
-
   return results;
 };
 const results1 = map(words, word => word[0]);
