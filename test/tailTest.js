@@ -8,7 +8,7 @@ const result = tail(["Hello", "Lighthouse", "Labs"]);
 
 // Test Case: Check the original array
 const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
+tail(words);
 // assertEqual(words.length, 3);
 
 

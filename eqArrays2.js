@@ -3,35 +3,17 @@ const assertEqual = require('./assertEqual');
 const eqArrays = (a, b) => {
   if (a.length !== b.length) return false;
   for (let i = 0; i < a.length; i++) {
-    if (typeof a[i] !== typeof b[i]) return false;
-    if (Array.isArray(a[i]) && Array.isArray(b[i])) {
-      console.log(a[i], b[i]);
-      console.log('?' + eqArrays(a[i], b[i]));
-      eqArrays(a[i], b[i]);
-    } else return a[i] === b[i] ? true : false;
+    const item1 = a[i];
+    const item2 = b[i];
+    if (typeof item1 !== typeof item2) return false;
+    if (Array.isArray(item1) && Array.isArray(item2)) {
+      // console.log(a[i], b[i]);
+      // console.log('?' + eqArrays(a[i], b[i]));
+      if (!eqArrays(item1, item2)) return false;
+    } else if (item1 !== item2)
+      return false;
   }
+  return true;
 };
 
-
-
-assertEqual(eqArrays([
-  [2, 3],
-  [4]
-], [
-  [2, 3],
-  [4]
-]), true); // => true
-
-assertEqual(eqArrays([
-  [2, 3],
-  [4]
-], [
-  [2, 3],
-  [4, 5]
-]), false); // => false
-assertEqual(eqArrays([
-  [2, 3],
-  [4]
-], [
-  [2, 3], 4
-]), false); // => false
+module.exports = eqArrays;

@@ -1,0 +1,26 @@
+{
+  "name": "@miriamfish/lotide",
+  "version": "1.0.0",
+  "description": "Lotide",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miriamdong/lotide.git"
+  },
+  "author": "Miriam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miriamdong/lotide/issues"
+  },
+  "homepage": "https://github.com/miriamdong/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.3",
+    "mocha": "^8.3.1"
+  }
+}

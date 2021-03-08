@@ -11,3 +11,5 @@ const reverse = function() {
   }
 };
 reverse();
+
+module.exports = reverse;

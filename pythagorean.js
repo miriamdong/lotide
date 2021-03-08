@@ -11,10 +11,12 @@ const input = [{
     y: 15
   }
 ];
-const result = input.map(x => {
+const pythagorean = input.map(x => {
   let arr = Object.values(x);
   return Math.sqrt(arr[0] * arr[0] + arr[1] * arr[1]);
 });
+
+module.exports = pythagorean;
 
 console.log(result[0] === 5);
 console.log(result[1] === 13);

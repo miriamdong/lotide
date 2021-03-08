@@ -1,15 +1,4 @@
-const eqArrays = function(a, b) {
-  let result;
-  if (Array.isArray(a) && Array.isArray(b)) {
-    if (a.length !== b.length) {
-      return false;
-    }
-    for (let i = 0; i < a.length; i++) {
-      result = a[i] === b[i] ? true : false;
-    }
-  }
-  return result;
-};
+const eqArrays = require('./eqArrays');
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
